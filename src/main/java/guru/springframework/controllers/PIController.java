@@ -1,6 +1,6 @@
 package guru.springframework.controllers;
 
-import guru.springframework.services.GreetingsServiceImpl;
+import guru.springframework.services.GreetingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 public class PIController {
 
     @Autowired
-    public GreetingsServiceImpl greetingsService;
+    public GreetingsService greetingsServiceImpl;
 
     public String sayHello() {
-        return greetingsService.sayGreeting();
+        return greetingsServiceImpl.sayGreeting();
     }
 
 }

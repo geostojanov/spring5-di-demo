@@ -13,7 +13,7 @@ public class PIControllerTest {
     @Before
     public void setUp() {
         this.piController = new PIController();
-        this.piController.greetingsService = new GreetingsServiceImpl();
+        this.piController.greetingsServiceImpl = new GreetingsServiceImpl();
     }
 
     @Test
