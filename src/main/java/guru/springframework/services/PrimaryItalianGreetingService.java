@@ -5,13 +5,13 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("it")
 @Primary
-@Profile("en")
-public class PrimaryGreetingService implements GreetingsService {
+public class PrimaryItalianGreetingService implements GreetingsService {
 
     @Override
     public String sayGreeting() {
-        return "Hello - Primary Greeting service.";
+        return "Buongiorno, sono il principale servizio italiano.";
     }
 
 }
