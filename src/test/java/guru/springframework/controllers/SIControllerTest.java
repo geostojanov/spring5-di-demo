@@ -1,6 +1,6 @@
 package guru.springframework.controllers;
 
-import guru.springframework.services.GreetingsServiceImpl;
+import guru.springframework.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,12 +13,12 @@ public class SIControllerTest {
     @Before
     public void setUp() {
         this.siController = new SIController();
-        siController.setGreetingsService(new GreetingsServiceImpl());
+        siController.setGreetingService(new GreetingServiceImpl());
     }
 
     @Test
     public void testGreeting() {
-        assertEquals(GreetingsServiceImpl.HELLO_GURUS, siController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_GURUS, siController.sayHello());
     }
 
 }

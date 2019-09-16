@@ -1,6 +1,6 @@
 package guru.springframework.controllers;
 
-import guru.springframework.services.GreetingsServiceImpl;
+import guru.springframework.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,12 +12,12 @@ public class CIControllerTest {
 
     @Before
     public void setUp() {
-        this.ciController = new CIController(new GreetingsServiceImpl());
+        this.ciController = new CIController(new GreetingServiceImpl());
     }
 
     @Test
     public void testGreeting() {
-        assertEquals(GreetingsServiceImpl.HELLO_GURUS, ciController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_GURUS, ciController.sayHello());
     }
 
 }
